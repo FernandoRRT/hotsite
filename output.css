@@ -35,12 +35,19 @@
   height: 200px;
 }
 
-.bg-img {
-  background-image: url("img/trilha.jpg");
-  background-size: cover;
-  height: 250px;
+.parallax {
+  min-height: 250px;
+  background: rgba(0, 0, 0, 0.555);
+}
+
+.bg-parallax {
+  height: auto;
+  min-height: 250px;
+  background: url("img/trilha.jpg") center;
+  background-repeat: no-repeat;
   background-position: center;
-  filter: brightness(50%);
+  background-attachment: fixed;
+  background-size: cover;
 }
 
 /*# sourceMappingURL=output.css.map */
