@@ -1,0 +1,46 @@
+#img-logo {
+  height: 50px;
+}
+
+.box-shadow {
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.05);
+}
+
+.bg-crimson {
+  background: #d52856;
+  border: none;
+}
+.bg-crimson:hover {
+  background: #b52249;
+}
+
+.container-carrossel {
+  height: 535px;
+}
+.container-carrossel img {
+  object-fit: cover;
+  object-position: center;
+  filter: brightness(50%);
+}
+
+.circular-img {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  transition-property: width height;
+  transition-duration: 1s;
+}
+.circular-img:hover {
+  width: 200px;
+  height: 200px;
+}
+
+.bg-img {
+  background-image: url("img/trilha.jpg");
+  background-size: cover;
+  height: 250px;
+  background-position: center;
+  filter: brightness(50%);
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Fitness</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark box-shadow p-2">
+            <a href="index.html" class="navbar-brand">
+                <img src="img/logo.png" id="img-logo" alt="" srcset="">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Abrir Navegação">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-between" id="navbarSupportedContent">
+                <div>
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="index.html">Home</a>
+                        </li>
+                    </ul>
+                </div>
+                <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" aria-label="Pesquisar">
+                    <button class="btn btn-outline-light bg-crimson" type="submit">Pesquisar</button>
+                </form>
+            </div>
+        </nav>
+    </header>
+    <section class="container-fluid" >
+        <div class="row text-white " >
+            <div class="col-12 p-0 " >
+                <div id="carrossel-academia" class="carousel slide container-carrossel" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#carrossel-academia" data-slide-to="0" class="active"></li>
+                        <li data-target="#carrossel-academia" data-slide-to="1"></li>
+                        <li data-target="#carrossel-academia" data-slide-to="2"></li>
+                    </ol>
+                    <div class="carousel-inner " >
+                        <div class="carousel-item active container-carrossel">
+                            <img class="d-block w-100" src="img/homem-fazendo-flexao.jpg" alt="Homem fazendo flexão">
+                            <div class="carousel-caption text-left">
+                                <p class="h2">Seu corpo em forma</p>
+                                <p class="lead font-weight-normal">Faça treinamento funcional e faça seu corpo se mexer</p>
+                                <a href="#" class="btn btn-outline-light btn-lg bg-crimson ">Saiba Mais</a>
+                            </div>
+                        </div>
+                        <div class="carousel-item container-carrossel">
+                            <img class="d-block w-100" src="img/academia.jpg" alt="Academia">
+                            <div class="carousel-caption text-center">
+                                <p class="h2">Academia preparada</p>
+                                <p class="lead font-weight-normal">Agende um horário e acompanho você em seus treinos</p>
+                                <a href="#" class="btn btn-outline-light btn-lg bg-crimson ">Saiba Mais</a>
+                            </div>
+                        </div>
+                        <div class="carousel-item container-carrossel">
+                            <img class="d-block w-100" src="img/mulher-fazendo-ioga.jpg" alt="Mulher fazendo Yoga">
+                            <div class="carousel-caption text-right">
+                                <p class="h2">Você em paz com seu corpo</p>
+                                <p class="lead font-weight-normal">Venha fazer aulas de sei lá e se liberte do estresse do dia-a-dia</p>
+                                <a href="#" class="btn btn-outline-light btn-lg bg-crimson ">Saiba Mais</a>
+                            </div>
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#carrossel-academia" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Anterior</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carrossel-academia" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Próximo</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <main class="container-fluid">
+        <div class="row py-3 px-5">
+            <div class="col-xl-4 col-md-6 text-center p-3">
+                <div class="d-flex justify-content-center wrap">
+                    <div>
+                        <img src="img/treinamento-funcional.jpg" alt="Treino funcional" class="circular-img">
+                    </div>
+                </div>
+                <p class="h3 font-weight-light">Treinamento funcional</p>
+                <p class="font-weight-light">O treinamento funcional baseia-se no movimento natural do ser humano como correr, pular e empurrar.</p>
+            </div>
+            <div class="col-xl-4 col-md-6 text-center p-3">
+                <div class="d-flex justify-content-center wrap">
+                    <img src="img/treinador.jpg" alt="Treino físico" class="circular-img">
+                </div>
+                <p class="h3 font-weight-light">Treino físico</p>
+                <p class="font-weight-light">Treinamento de cada grupo muscular trabalhando duas vezes na semana usando aparelhos de academia.</p>
+            </div>
+            <div class="col-xl-4 col-md-6 text-center p-3">
+                <div class="d-flex justify-content-center wrap " >
+                    <img src="img/posicao-ioga.jpg" alt="Ioga" class="circular-img">
+                </div>
+                <p class="h3 font-weight-light">Ioga</p>
+                <p class="font-weight-light">É um conceito que se refere às tradicionais disciplinas físicas e mentais originárias da Índia.</p>
+            </div>
+        </div>
+        <div class="row bg-img align-items-center text-center text-white">
+            <div class="col-12 p-0 " >
+                <p class="h3">"Uma hora antes da academia: cansaço e vontade de ficar em casa.</p>
+                <p class="h3">Uma hora depois da academia: aquele sentimento maravilhoso de dever cumprido."</p>
+            </div>
+        </div>
+    </main>
+    
+</body>
+</html>
