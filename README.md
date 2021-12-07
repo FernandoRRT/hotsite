@@ -4,8 +4,3 @@
 sass --watch input.scss:output.css
 
 
-
-parei o video em 59 mins
-
-
-https://online.igti.com.br/courses/4042/discussion_topics/38555?module_item_id=262006
