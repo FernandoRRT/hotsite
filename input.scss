@@ -26,10 +26,16 @@
 .container-carrossel {
   height: 535px;
   img {
-    
-    background-size: cover;
+        
+ background-size: cover;
     filter: brightness(50%);
   }
+}
+
+.img-carrossel {
+    
+  background-size: cover;
+  filter: brightness(50%);
 }
 
 .circular-img {
