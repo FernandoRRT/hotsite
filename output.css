@@ -14,10 +14,6 @@
   background: #b52249;
 }
 
-.bg-lightdark {
-  background: #6351ce;
-}
-
 .container-carrossel {
   height: 535px;
   position: relative;
@@ -29,13 +25,6 @@
   -webkit-transform: translate(-30%, 0%);
   -ms-transform: translate(-30%, 0%);
   transform: translate(-30%, 0%);
-}
-.container-carrossel .first-1slide {
-  background: url("img/rogerio_flexao.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-attachment: fixed;
-  background-size: cover;
 }
 
 .circular-img {
@@ -66,10 +55,6 @@
   background-position: center;
   background-attachment: fixed;
   background-size: cover;
-}
-
-.whatscollor {
-  color: #32BB46;
 }
 
 .social-list {
@@ -107,6 +92,9 @@
     font-size: 1.2em;
     font-weight: bold;
   }
+}
+.whatscollor {
+  color: #32BB46;
 }
 
 /*# sourceMappingURL=output.css.map */
