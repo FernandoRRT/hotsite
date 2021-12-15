@@ -147,7 +147,7 @@
                     <h3 class="h3">
                         Quer saber mais?<small> Entre em contato.</small>
                     </h1>
-                    <form class="w-100" id="formulario">
+                    <form class="w-100" id="formulario" action="salvar.php" method="post" name="formulario" enctype="multipart/form-data">
                     <div class="row">
                         <div class="col-md-6">
                             <div class="form-group">
@@ -162,19 +162,16 @@
                                     <input type="email" class="form-control" id="email" placeholder="Digite seu email" required="required" /></div>
                             </div>
                             <div class="form-group">
-                                <label for="subject">Assunto</label>
-                                <select id="subject" name="subject" class="form-control" required="required">
-                                    <option value="default" selected="">Escolha um abaixo:</option>
-                                    <option value="atendimento">Atendimento geral</option>
-                                    <option value="sugestao">Sugestões</option>
-                                    <option value="cobranca">Cobrança</option>
-                                </select>
+                                <label for="phone">Telefone</label>
+                                <div class="input-group">
+                                    <input type="tel" id="phone" class="form-control" maxlength="14" placeholder="Número de telefone" required="required" />
+                                </div>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label for="name">Mensagem</label>
-                                <textarea name="message" id="c" class="form-control" rows="8" cols="25" required="required"
+                                <textarea id="message" class="form-control" rows="8" cols="25" required="required"
                                 placeholder="Escreva sua mensagem aqui."></textarea>
                             </div>
                         </div>
