@@ -1,26 +1,41 @@
 <?php
 
+
+/**
+ * Send as JSON
+ */
+header("Content-Type: application/json", true);
+
+
 //if(!$_POST) exit;
- 
-// 		$html = 'Nome: '.$_POST['nome'];
-// 		$html .= "\n";
-// 		$html .= 'Email: '.$_POST['email'];
-// 		$html .= "\n\n Obrigado pela mensagem.";
-// 		echo $html;
-if ($_POST) {
+
+	// $nome = $_POST['name'];
+	// $telefone = $_POST['phone'];
+	// $email = $_POST['email'];
+	// $assunto = 'Mensagem nova do site!';
+	// $destino = "suporteiros@gmail.com";
+	// $mensagem = '<h1 style="text-align: center;"><span style="font-family:verdana,geneva,sans-serif">Tem mensagem nova pra voc&ecirc;!</span></h1>';
+	// $mensagem .= '<p><span style="font-family:georgia,serif">Rog&eacute;rio, <strong>'.$_POST['name'].'</strong>deseja falar contigo:</span></p>';
+	// $mensagem .= '<p><span style="font-family:tahoma,geneva,sans-serif">'.$_POST['message'].'</span></p><hr />';
+	// $mensagem .= '<address>Esse email foi enviado atrav&eacute;s do seu site.</address>';
+	// $mensagem .= '<div>Nome: '.$_POST['name'].'</div><div>Email: '.$_POST['email'].'</div><div>Telefone: '.$_POST['phone'].'</div><address>&nbsp;</address>';
+
 	$nome = $_POST['name'];
 	$telefone = $_POST['phone'];
 	$email = $_POST['email'];
+	$texto = $_POST['message'];
 	$assunto = 'Mensagem nova do site!';
-	//$mensagem = $_POST['message'];
 	$destino = "suporteiros@gmail.com";
 
-	//4 – Agora definimos a  mensagem que vai ser enviado no e-mail
 	$mensagem = '<h1 style="text-align: center;"><span style="font-family:verdana,geneva,sans-serif">Tem mensagem nova pra voc&ecirc;!</span></h1>';
-	$mensagem .= '<p><span style="font-family:georgia,serif">Rog&eacute;rio, <strong>'.$_POST['name'].'</strong>deseja falar contigo:</span></p>';
-	$mensagem .= '<p><span style="font-family:tahoma,geneva,sans-serif">'.$_POST['message'].'</span></p><hr />';
+	$mensagem .= '<p><span style="font-family:georgia,serif">Rog&eacute;rio, <strong>'.$nome.'</strong>deseja falar contigo:</span></p>';
+	$mensagem .= '<p><span style="font-family:tahoma,geneva,sans-serif">'.$texto.'</span></p><hr />';
 	$mensagem .= '<address>Esse email foi enviado atrav&eacute;s do seu site.</address>';
-	$mensagem .= '<div>Nome: '.$_POST['name'].'</div><div>Email: '.$_POST['email'].'</div><div>Telefone: '.$_POST['phone'].'</div><address>&nbsp;</address>';
+	$mensagem .= '<div>Nome: '.$nome.'</div><div>Email: '.$email.'</div><div>Telefone: '.$telefone.'</div><address>&nbsp;</address>';
+
+
+
+
 
 
 	//codificações corretas e  tudo mais.
@@ -38,14 +53,14 @@ if ($_POST) {
 	if(mail($destino, $assunto, $mensagem, $headers)) {
 		// Si el correo es enviado correctamente, mostramos un mensaje 
 		$a = 1;
-		$b = "<div class='alert alert-success'>Tu Mensaje ha sido enviado Correctamente !</div>";
-	$dab = array(
-		"a" => $a, 
-		"b" => $b
-	);
+		$b = "<div class='alert alert-success'>Sua mensagem foi enviada corretamente! Muito obrigado.</div>";
+		$dab = array(
+			"a" => $a, 
+			"b" => $b
+		);
 	echo (json_encode($dab));
 	} else {
 		echo 'ERROR!';
 	}
-}
+
 ?>

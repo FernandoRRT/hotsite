@@ -1,5 +1,3 @@
-
-
 // $('#btnContactUs').click(function(e){
 //     e.preventDefault();
 
@@ -27,15 +25,10 @@
 //            .fail(function(jqXHR, textStatus, msg){
 //                 alert(msg);
 //            });
-
-
-
 //         // if($('#btnContactUs').val() == 'Enviando...'){
 // 		// 	return(false);
 // 		// }
-		
 // 		// $('#btnContactUs').val('Enviando...');
-		
 // 		// $.ajax({
 // 		// 	url: 'valida-formulario.php',
 // 		// 	type: 'post',
@@ -64,26 +57,16 @@
 
 $(function(){
     $("#formulario").on("submit", function(e){
-              
-        // Cancelamos el evento si se requiere 
         e.preventDefault();
- 
-        // Obtenemos los datos del formulario 
-        
-        //let formData = new FormData(document.getElementById("formulario"));
-        //formData.append("dados", "valores");
-               
-       //ssss console.log(formData);
+       //let formData = new FormData(document.getElementById("formulario"));
        console.log($('#name').val());
        console.log($('#email').val());
        console.log($('#phone').val());
        console.log($('#message').val());
 
-
-        // Enviamos los datos al archivo PHP que procesará el envio de los datos a un determinado correo 
         $.ajax({
-            url: "valida-formulario.php",
-            type: "POST",
+            url: "valida-formulario.php/",
+            type: "post",
             dataType: "json",
             //data: formData,
             data: {
@@ -99,28 +82,17 @@ $(function(){
               $('#formulario').html("Enviando mensagem...");
             },
         })
- 
-        // Cuando el formulario es enviado, mostramos un mensaje en la vista HTML 
-        // En el archivo enviarcorreo.php devuelvo el valor '1' el cual es procesado con jQuery Ajax 
-        // y significa que el mensaje se envio satisfactoriamente. 
         .done(function (res) {                  
- 
           if(res.a == "1"){
-                    
-            // Mostramos el mensaje 'Tu Mensaje ha sido enviado Correctamente !' 
-            $("#formulario").html(res.b);                   
-            $("#formulario").trigger("reset");    
- 
-          }  else {                                       
             $("#formulario").html(res.b); 
+            $("#formulario").trigger("reset");    
+		}  else {                                       
+			$("#formulario").html(res.b); 
+
           }
-                                                      
         })
- 
-        // Mensaje de error al enviar el formulario 
         .fail(function (res) {                    
             $("#formulario").html(res.b);
         });
- 
     });
 });
