@@ -6,7 +6,7 @@
 	$email = $_POST['email'];
 	$texto = $_POST['message'];
 	$assunto = 'Mensagem nova do site!';
-	$destino = "rogerioamaralborba@gmail.com";
+	$destino = "suporteiros@gmail.com";
 
 	$mensagem = '<h2 style="text-align: center;"><span style="font-family:verdana,geneva,sans-serif">Tem mensagem nova pra voc&ecirc;!</span></h2>';
 	$mensagem .= '<p><span style="font-family:georgia,serif">Rog&eacute;rio, <strong>'.$nome.'</strong> deseja falar contigo:</span></p>';
@@ -16,9 +16,9 @@
 
 	//codificações corretas e  tudo mais.
 	$headers =  "Content-Type:text/html; charset=UTF-8\n";
-	$headers .= "From:  profrogerio.com.br<".$email.">\n";
+	$headers .= "From:  suporteiros.com.br<".$email.">\n";
 	//Vai ser //mostrado que  o email partiu deste email e seguido do nome
-	$headers .= "X-Sender:  <sistema@profrogerio.com>\n";
+	$headers .= "X-Sender:  <sistema@suporteiros.com>\n";
 	//email do servidor //que enviou
 	$headers .= "X-Mailer: PHP  v".phpversion()."\n";
 	$headers .= "X-IP:  ".$_SERVER['REMOTE_ADDR']."\n";
